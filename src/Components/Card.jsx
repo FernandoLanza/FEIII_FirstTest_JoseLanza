@@ -1,4 +1,4 @@
-import './Formulario.css'; // Importa el archivo de estilos CSS
+import './Formulario.css';
 
 const Card = ({ estudiante }) => {
 
