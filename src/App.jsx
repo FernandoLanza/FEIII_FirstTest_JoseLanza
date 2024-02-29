@@ -1,23 +1,22 @@
-import React, { useState } from "react";
-import Formulario from "./Components/Formulario";
-import Card from "./Components/Card";
+// App.jsx
+import { useState } from 'react';
+import Card from './Components/Card';
+import Formulario from './Components/Formulario';
+import './App.css'; // Importa el archivo de estilos CSS
 
 function App() {
-  const [nombre, setNombre] = useState("");
-  const [apellido, setApellido] = useState("");
-  const [error, setError] = useState({false});
+  const [estudiante, setEstudiante] = useState({});
+  const handleEstudianteSubmit = (nuevoEstudiante) => {
+    setEstudiante(nuevoEstudiante);
+  }
 
   return (
-    <div className="App">
-      <h1>Carga de estudiantes</h1>
-      <Formulario 
-        key={nombre}
-        //setHire={setHire}
-        student={student}
-        // nombre={nombre} 
-        // apellido={apellido}
-       />
-      {!error && <Card nombre={nombre} apellido={apellido} />}
+    <div className="container">
+      <h1>Formulario de estudiantes</h1>
+      <hr></hr>
+      <Formulario onSubmit={handleEstudianteSubmit} />
+      <hr></hr>
+      <Card estudiante={estudiante} />
     </div>
   );
 }
@@ -29,44 +28,37 @@ export default App;
 
 
 
-// import React, { useState } from "react";
-// import Formulario from "./Components/Formulario";
-// import Card from "./Components/Card";
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import { useState } from 'react';
+// import Card from './Components/Card';
+// import Formulario from './Components/Formulario';
+
 
 // function App() {
-//   const [nombre, setNombre] = useState("");
-//   const [apellido, setApellido] = useState("");
+
+//   const [estudiante, setEstudiante] = useState({});
+//   const handleEstudianteSubmit = (nuevoEstudiante)=>{setEstudiante(nuevoEstudiante)}
 
 //   return (
-//     <div className="App">
-//       <h1>Carga de estudiantes</h1>
-//       <Formulario nombre={nombre} apellido={apellido} />
-//       <Card nombre={nombre} apellido={apellido} />
-//     </div>
-//   );
-// }
+//     <div>
+//       <h1>Formulario de estudiantes</h1>
+//       <hr></hr>
+//       <Formulario onSubmit={handleEstudianteSubmit} />
+//       <hr></hr>
+//       <Card estudiante={estudiante} />
 
-// export default App;
-
-
-
-
-
-
-
-
-
-// import React from "react";
-// import Formulario from "./Components/Formulario";
-// import Card from "./Components/Card";
-
-// function App() {
-  
-//   return (
-//     <div className="App">
-//       <h1>Carga de estudiantes</h1>
-//       <Formulario />
-//       <Card nombre="" apellido="" />
 //     </div>
 //   );
 // }

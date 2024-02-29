@@ -1,0 +1,51 @@
+/* Formulario.css */
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.formulario label {
+  font-weight: bold;
+}
+
+.formulario input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.formulario button {
+    margin: 0 auto;
+    width: 200px;
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.formulario button:hover {
+  background-color: #0056b3;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.card {
+  margin: 0 auto;
+  text-align: center;
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin-top: 20px;
+  width: 300px;
+}
+
+.card-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
